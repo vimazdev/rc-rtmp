@@ -1,10 +1,15 @@
-// import React from 'react'
+import React from "react"
+import HelmetComponent from "./components/helmet/helmetComponent"
+interface AppProps {
 
-const App = () => {
+}
+
+const App: React.FC<AppProps> = () => {
   return (
-    <div>
-      {/* <h1>Hellow World</h1> */}
-    </div>
+    <>
+      <HelmetComponent/>
+
+    </>
   )
 }
 
