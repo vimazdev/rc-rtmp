@@ -1,7 +1,7 @@
 {
   "name": "rc-rtmp",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "husky": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
