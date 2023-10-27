@@ -56,5 +56,13 @@ const ContainerHeader = styled('div')`
       transform: translateX(-50%);
     }
   }
+
+  @media (max-width: 480px) {
+      .caja_gradient{
+        img{
+          margin-top:75px;
+        }
+      }
+  }
 `
 
