@@ -1,0 +1,33 @@
+@import "./variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  list-style: none;
+  text-align: none;
+}
+
+* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-inter;
+}
+
+p,
+span,
+li,
+ul ol {
+  font-family: $font-monserrat;
+}
+
+// Frontend
+
+html, body{
+    background-color: $color-primary;
+    color: $color-white;
+}
