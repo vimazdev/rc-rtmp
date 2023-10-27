@@ -6,7 +6,7 @@
   box-sizing: border-box;
   word-wrap: break-word;
   list-style: none;
-  text-align: none;
+  text-decoration: none;
 }
 
 * h1,
@@ -15,19 +15,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-inter;
+  font-family: $font-monserrat;
 }
 
 p,
 span,
 li,
 ul ol {
-  font-family: $font-monserrat;
+  font-family: $font-inter;
 }
 
 // Frontend
 
 html, body{
-    background-color: $color-primary;
+    background-color: $color-bg-component;
     color: $color-white;
+    font-family: $font-inter;
+}
+
+
+.app_content{
+  background-color: $color-white;
+  z-index: 9999999;
+  padding-bottom: 320px;
+
+  .header{
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+  }
 }

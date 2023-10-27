@@ -1,0 +1,31 @@
+@import "../../../styles/variable";
+
+.Navbar-layout {
+  background-color: $color-bg-component;
+  box-shadow: $box-shadow-7;
+  transition: $transicionRapida;
+  z-index: 99999999;
+
+  .icon_help{
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    box-shadow: $box-shadow-5;
+    .help{
+        display: none;
+    }
+    .icon_help{
+        display: block;
+    }
+    grid-template-columns: auto 50px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.content-logo {
+  span {
+    font-size: $regular-text;
+  }
+}
