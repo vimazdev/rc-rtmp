@@ -26,6 +26,8 @@ const ContentFooter = styled('div')`
 
     p{
         font-size:14px;
+        text-align:center;
+        pading:5px 10px;
     }
 
     a{

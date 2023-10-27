@@ -29,6 +29,7 @@ const Player = styled('div')`
     position: relative;
     margin-left:50%;
     transform: translateX(-50%);
+    background-color:#000;
  
     .video-wrapper{
         position: relative;
@@ -43,4 +44,5 @@ const Player = styled('div')`
         width: 100%;
         height: 100%;
     }
+
 `
