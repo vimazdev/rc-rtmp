@@ -5,6 +5,7 @@ import { styled } from "@mui/material"
 // 
 import logo from './assets/rc.png'
 import PlayerComponent from "@components/player-multimedia/PlayerComponent"
+import AboutMe from '@shared/articles/home/about-me/AboutMe';
 
 interface AppProps {
 }
@@ -12,16 +13,21 @@ interface AppProps {
 const App: React.FC<AppProps> = () => {
   return (
     <>
-      <HelmetComponent/>
+      <HelmetComponent />
 
       <Container className="app_content">
         <ContainerHeader className="header">
           <div className="caja_gradient">
             <img src={logo} alt="logo" />
             {/* Player */}
-            <PlayerComponent/>
+            <PlayerComponent />
           </div>
         </ContainerHeader>
+
+        {/* Container */}
+        <Content>
+          <AboutMe />
+        </Content>
       </Container>
 
     </>
@@ -33,7 +39,16 @@ export default App
 const Container = styled('div')`
   width:100%;
   position:relative;
-  min-height: calc(100vh - 160px);
+
+`
+const Content = styled('div')`
+  width:100%;
+  max-width:800px;
+  margin:0 auto;
+  padding:1rem;
+  padding-bottom:10rem;
+  color:black;
+  
 `
 
 // 
@@ -41,6 +56,7 @@ const ContainerHeader = styled('div')`
   width:100%;
   position:relative;
   min-height: 320px;
+  margin-bottom: 250px;
 
   .caja_gradient{
     position:absolute;

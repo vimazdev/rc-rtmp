@@ -25,6 +25,10 @@ ul ol {
   font-family: $font-inter;
 }
 
+p{
+  padding: 0 1rem 1rem 1rem !important;
+}
+
 // Frontend
 
 html, body{
@@ -36,8 +40,8 @@ html, body{
 
 .app_content{
   background-color: $color-white;
-  z-index: 9999999;
-  padding-bottom: 320px;
+  flex: 1;
+
 
   .header{
     background-image: url('../assets/background.jpg');
