@@ -1,22 +1,20 @@
-// import image from '../Import-image/image.js';
+import image1 from "@assets/servicios/servicios.png";
+import image2 from "@assets/servicios/servicios2.png";
+
 
 interface ItemProps {
     imgSrc: string;
     description: string;
-  }
+}
   
   const items: ItemProps[] = [
     {
-      imgSrc: "URL_DE_LA_IMAGEN_1",
-      description: "Descripción del Item 1",
+      imgSrc: image1,
+      description: "Imagenes Aereas",
     },
     {
-      imgSrc: "URL_DE_LA_IMAGEN_2",
-      description: "Descripción del Item 2",
-    },
-    {
-      imgSrc: "URL_DE_LA_IMAGEN_3",
-      description: "Descripción del Item 3",
+      imgSrc: image2,
+      description: "Transmision en Vivo",
     },
     // Agrega más elementos según sea necesario
   ];

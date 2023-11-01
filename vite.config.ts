@@ -8,4 +8,7 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
   ],
+  optimizeDeps: {
+    include: ['images'],
+  },
 })

@@ -12,7 +12,7 @@ const NavbarLayout: React.FC<NavbarProps> = () => {
   return (
     <Navbar className='Navbar-layout'>
       <ContentLogo className='content-logo'>
-        <span>RCTV - En vivo</span>
+        <span>RC - Media en vivo</span>
       </ContentLogo>
       <ContentNav>
         <ul className='help'>
