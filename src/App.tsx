@@ -3,7 +3,7 @@ import HelmetComponent from '@components/helmet/helmetComponent'
 import { styled } from "@mui/material"
 
 // 
-import logo from './assets/rc.png'
+import logo from './assets/rc-media.png'
 import PlayerComponent from "@components/player-multimedia/PlayerComponent"
 import AboutMe from '@shared/articles/home/about-me/AboutMe';
 
@@ -76,7 +76,7 @@ const ContainerHeader = styled('div')`
   @media (max-width: 480px) {
       .caja_gradient{
         img{
-          margin-top:75px;
+          margin-top:40px;
         }
       }
   }

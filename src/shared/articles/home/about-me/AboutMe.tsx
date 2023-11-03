@@ -10,30 +10,29 @@ import RC from '@assets/ID/foto.png';
 import './AboutMe.scss';
 import PlayerYoutube from '@components/player-youtube/PlayerYoutube';
 
-interface AboutMeProps {
-}
-
 // Constantes
 const embed: string = "https://www.youtube.com/embed/UYNv-E9MglI?si=AUXaeo_7_roaSY-3";
+interface AboutMeProps {
+}
 
 const AboutMe: React.FC<AboutMeProps> = () => {
 
     return (
         <Content className='root_AboutMe'>
-            <h2 className="custom-heading">¡Conócenos!</h2>
             <h3>El Primer Canal Online desde Villa Hermosa, La Romana, República Dominicana</h3>
+            <h2 className="custom-heading">¡Conócenos!</h2>
 
             <ContentInfo>
                 <div className="contentImage">
                     <img src={RC} alt="Rodolfo Cordones" />
                 </div>
                 <div className="contentDetails">
-                    <p>¡Bienvenidos a nuestro innovador canal online de noticias! Este proyecto se hace realidad gracias al incansable esfuerzo y dedicación de Rodolfo Cordones, un destacado locutor, comunicador y respetado líder político de la ciudad de La Romana.</p>
+                    <p>¡Bienvenidos a nuestro innovador canal online! Este proyecto se hace realidad gracias al incansable esfuerzo y dedicación de Rodolfo Cordones, un destacado locutor, comunicador y respetado líder político de la ciudad de La Romana.</p>
                     <p>Sintonícenos y únase a esta emocionante travesía informativa. ¡Estamos aquí para servirles con integridad, pasión y profesionalismo!</p>
                 </div>
             </ContentInfo>
 
-            <h2 className="custom-heading">Nuestro trabajo</h2>
+            <h2 className="custom-heading">Parte de nosotros</h2>
 
             <ContentDetails>
                 <PlayerYoutube embed={embed} />
