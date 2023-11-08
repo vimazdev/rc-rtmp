@@ -3,6 +3,9 @@ import { styled, Container, Grid } from '@mui/material';
 import items from "../../../../utils/data/itemsServices";
 import ItemContainerGrid from '../../../../components/Item-container-grid/ItemContainerGrid';
 import itemsAbout from "../../../../utils/data/itemsAbout";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 // Multimedia
 import RC from '@assets/ID/foto.png';
@@ -10,6 +13,7 @@ import RC from '@assets/ID/foto.png';
 // Styles
 import './AboutMe.scss';
 import CarouselVideoPlayer from '../../../../components/carousel-video-player/carouselVideoPlayer';
+import ButtonIconText from '@components/button-icon-text/ButtonIconText';
 
 interface AboutMeProps {
     itemsAbout?: { url: string }[];
@@ -66,6 +70,12 @@ const AboutMe: React.FC<AboutMeProps> = () => {
                     <p>Sintonícenos y únase a esta emocionante travesía informativa. ¡Estamos aquí para servirles con integridad, pasión y profesionalismo!</p>
                 </div>
             </ContentInfo>
+
+            <ContainerSocial>
+                <ButtonIconText text="Facebook" icon={<FacebookIcon/>}/>
+                <ButtonIconText text="YouTube" icon={<YouTubeIcon/>}/>
+                <ButtonIconText text="Instagram" icon={<InstagramIcon/>}/>
+            </ContainerSocial><br />
 
 
             <h2 className="custom-heading">Parte de nosotros</h2>
@@ -129,10 +139,28 @@ const ContentDetails = styled('div')`
 `
 
 const ContainerFM = styled('div')`
-position: relative;
-width: 100%;
+    position: relative;
+    width: 100%;
     padding:20px;
     height: max-content;
     min-height:110px;
     min-width: 280px;
+`
+
+const ContainerSocial = styled('div')`
+    position: relative;
+    width: 100%;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    button{
+        border-radius: 10px !important;
+        font-size:18px;
+        padding: 8px 15px;
+    }
 `
