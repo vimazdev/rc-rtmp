@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styled from '@emotion/styled';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import BoxModalContact from '@components/box-modal-contact/BoxModalContact';
 import "./Navbar.scss";
 
 interface NavbarProps {
@@ -9,17 +10,38 @@ interface NavbarProps {
 }
 
 const NavbarLayout: React.FC<NavbarProps> = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Navbar className='Navbar-layout'>
       <ContentLogo className='content-logo'>
-        <span>RC - Media en vivo</span>
+        <span>RC Media - en vivo</span>
       </ContentLogo>
       <ContentNav>
         <ul className='help'>
-          <li>Contacto</li>
-          <li>¡Ayuda!</li>
+          <li>
+            {
+              screenWidth < 480 ? (
+                <BoxModalContact buttonText={<HelpOutlineIcon />}/>
+              ) : (
+                <BoxModalContact buttonText={"¡Contacto!"} />
+              )
+            }
+          </li>
         </ul>
-        <HelpOutlineIcon className='icon_help'/>
+
       </ContentNav>
     </Navbar>
   )
@@ -39,7 +61,7 @@ const Navbar = styled('div')`
   background-color: $color-secondary;
   `
 
-// 
+
 const ContentLogo = styled('div')`
   display:flex;
   item-align:center;
@@ -51,7 +73,6 @@ const ContentLogo = styled('div')`
   }
   `
 
-// 
 const ContentNav = styled('div')`
     width:100%;
     display:flex;
@@ -61,5 +82,10 @@ const ContentNav = styled('div')`
     ul{
       display:flex;
       gap:20px;
+
+      li *{
+        color:white;
+        font-weight:bold;
+      }
     }
   `

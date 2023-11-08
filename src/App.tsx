@@ -2,7 +2,6 @@ import React from "react"
 import HelmetComponent from '@components/helmet/helmetComponent'
 import { styled } from "@mui/material"
 
-// 
 import logo from './assets/rc-media.png'
 import PlayerComponent from "@components/player-multimedia/PlayerComponent"
 import AboutMe from '@shared/articles/home/about-me/AboutMe';
@@ -51,7 +50,6 @@ const Content = styled('div')`
   
 `
 
-// 
 const ContainerHeader = styled('div')`
   width:100%;
   position:relative;

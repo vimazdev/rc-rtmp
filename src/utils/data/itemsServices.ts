@@ -16,7 +16,6 @@ interface ItemProps {
       imgSrc: image2,
       description: "Transmision en Vivo",
     },
-    // Agrega más elementos según sea necesario
   ];
   
   export default items;

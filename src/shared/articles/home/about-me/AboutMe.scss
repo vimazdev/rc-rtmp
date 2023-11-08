@@ -5,8 +5,8 @@
     .custom-heading {
         display: flex;
         align-items: center;
-        font-size: 24px; /* Tamaño de fuente deseado */
-        color: #333; /* Color del texto */
+        font-size: 24px; 
+        color: #333; 
         padding-bottom: 30px;
       }
       
@@ -14,10 +14,10 @@
       .custom-heading::after {
         content: "";
         flex: 1;
-        height: 2px; /* Altura de las líneas horizontales de 2px */
+        height: 2px; 
         border-radius: 2px;
-        background: #ebeaea; /* Color de las líneas */
-        margin: 0 10px; /* Espacio entre el texto y las líneas */
+        background: #ebeaea; 
+        margin: 0 10px;
       }
 
       h3{

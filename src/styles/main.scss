@@ -49,3 +49,9 @@ html, body{
     background-size: cover;
   }
 }
+
+// ---------------- react-responsive-carousel ----------------
+.carousel .control-arrow, .carousel .control-dots .dot {
+  background-color: #FF5733; 
+  color: #fff; 
+}
