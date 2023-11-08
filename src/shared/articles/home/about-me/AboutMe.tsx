@@ -1,24 +1,59 @@
 import React from 'react';
 import { styled, Container, Grid } from '@mui/material';
-import  items  from "../../../../utils/data/itemsServices";
-import ItemContainerGrid from '../../../../components/Item-container-grid/ItemContainerGrid'
+import items from "../../../../utils/data/itemsServices";
+import ItemContainerGrid from '../../../../components/Item-container-grid/ItemContainerGrid';
+import itemsAbout from "../../../../utils/data/itemsAbout";
 
 // Multimedia
 import RC from '@assets/ID/foto.png';
 
 // Styles
 import './AboutMe.scss';
-import PlayerYoutube from '@components/player-youtube/PlayerYoutube';
+import CarouselVideoPlayer from '../../../../components/carousel-video-player/carouselVideoPlayer';
 
-// Constantes
-const embed: string = "https://www.youtube.com/embed/UYNv-E9MglI?si=AUXaeo_7_roaSY-3";
 interface AboutMeProps {
+    itemsAbout?: { url: string }[];
 }
 
 const AboutMe: React.FC<AboutMeProps> = () => {
 
     return (
         <Content className='root_AboutMe'>
+            {/* Radio FM */}
+            <ContainerFM>
+                <div className="zeno-fm-container">
+                    <iframe
+                        src="https://zeno.fm/player/RCMedia"
+                        frameBorder={0}
+                        scrolling="no"
+                        title="Zeno.FM Player"
+                    ></iframe>
+                    <a
+                        href="https://zeno.fm/"
+                        target="_blank"
+                        style={{ fontSize: '0.9em', lineHeight: '10px' }}
+                    >
+                        A Zeno.FM Station
+                    </a>
+                    <style>
+                        {`
+          .zeno-fm-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 110px;
+          }
+
+          .zeno-fm-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        `}
+                    </style>
+                </div>
+            </ContainerFM>
+            {/* End Radio FM */}
             <h3>El Primer Canal Online desde Villa Hermosa, La Romana, República Dominicana</h3>
             <h2 className="custom-heading">¡Conócenos!</h2>
 
@@ -32,18 +67,17 @@ const AboutMe: React.FC<AboutMeProps> = () => {
                 </div>
             </ContentInfo>
 
-            <h2 className="custom-heading">Parte de nosotros</h2>
 
+            <h2 className="custom-heading">Parte de nosotros</h2>
             <ContentDetails>
-                <PlayerYoutube embed={embed} />
+                <CarouselVideoPlayer items={itemsAbout} />
             </ContentDetails>
 
 
             <h2 className="custom-heading">Servicios</h2>
-
             <Container>
                 <Grid container spacing={2} justifyContent="center">
-                    {items.map((item:any, index:number) => (
+                    {items.map((item: any, index: number) => (
                         <Grid item key={index}>
                             <ItemContainerGrid imgSrc={item.imgSrc} description={item.description} />
                         </Grid>
@@ -91,5 +125,14 @@ const ContentInfo = styled('div')`
 const ContentDetails = styled('div')`
     width: 100%;
     padding:20px;
+    min-width: 280px;
+`
+
+const ContainerFM = styled('div')`
+position: relative;
+width: 100%;
+    padding:20px;
+    height: max-content;
+    min-height:110px;
     min-width: 280px;
 `

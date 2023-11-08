@@ -1,5 +1,6 @@
 import React from 'react'
-import {  Paper, Button } from "@mui/material";
+import {  Paper } from "@mui/material";
+import BoxModalContact from '@components/box-modal-contact/BoxModalContact';
 
 interface ItemContainerGridProps {
     imgSrc: string;
@@ -11,9 +12,7 @@ const ItemContainerGrid: React.FC<ItemContainerGridProps> = ({imgSrc,description
         <Paper style={{ minWidth: 250, maxWidth:200, padding: 16, textAlign: "center", margin: 16 }}>
             <img src={imgSrc} alt="Item" style={{ width: "100%", borderRadius: 5 }} />
             <p><strong>{description}</strong></p>
-            <Button variant="contained" color="primary">
-                Contactar
-            </Button>
+            <BoxModalContact buttonText={"Contactar"}/>
         </Paper>
     )
 }
