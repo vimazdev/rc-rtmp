@@ -5,7 +5,8 @@ import ItemContainerGrid from '../../../../components/Item-container-grid/ItemCo
 import itemsAbout from "../../../../utils/data/itemsAbout";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import InstagramIcon from '@mui/icons-material/Instagram';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsappIcon from '@mui/icons-material/WhatsApp';
 
 // Multimedia
 import RC from '@assets/ID/foto.png';
@@ -19,11 +20,17 @@ interface AboutMeProps {
     itemsAbout?: { url: string }[];
 }
 
+// Constantes
+const Link_Whatsapp: string = 'https://whatsapp.com/channel/0029VaCldAsGzzKTLUPRqH0o';
+const Link_Facebook: string = 'https://www.facebook.com/RodolfoCordones?mibextid=ZbWKwL';
+const Link_Youtube: string = 'https://youtube.com/@rodolfocordones?si=jk1lwMqAgYTTMg-C';
+
 const AboutMe: React.FC<AboutMeProps> = () => {
 
     return (
         <Content className='root_AboutMe'>
             {/* Radio FM */}
+            <h3><strong>Escucha 24/7 la programación de nuestra emisora digital.</strong></h3>
             <ContainerFM>
                 <div className="zeno-fm-container">
                     <iframe
@@ -56,9 +63,9 @@ const AboutMe: React.FC<AboutMeProps> = () => {
         `}
                     </style>
                 </div>
-            </ContainerFM>
+            </ContainerFM> <br /><br />
             {/* End Radio FM */}
-            <h3>El Primer Canal Online desde Villa Hermosa, La Romana, República Dominicana</h3>
+            <h3>El Primer Canal y radio online desde Villa Hermosa, La Romana, República Dominicana</h3>
             <h2 className="custom-heading">¡Conócenos!</h2>
 
             <ContentInfo>
@@ -66,15 +73,16 @@ const AboutMe: React.FC<AboutMeProps> = () => {
                     <img src={RC} alt="Rodolfo Cordones" />
                 </div>
                 <div className="contentDetails">
-                    <p>¡Bienvenidos a nuestro innovador canal online! Este proyecto se hace realidad gracias al incansable esfuerzo y dedicación de Rodolfo Cordones, un destacado locutor, comunicador y respetado líder político de la ciudad de La Romana.</p>
+                    <p>¡Bienvenidos a nuestro innovador canal y radio online! Este proyecto se hace realidad gracias al incansable esfuerzo y dedicación de Rodolfo Cordones, un destacado locutor, comunicador y respetado líder político de la ciudad de La Romana.</p>
                     <p>Sintonícenos y únase a esta emocionante travesía informativa. ¡Estamos aquí para servirles con integridad, pasión y profesionalismo!</p>
                 </div>
             </ContentInfo>
 
             <ContainerSocial>
-                <ButtonIconText text="Facebook" icon={<FacebookIcon/>}/>
-                <ButtonIconText text="YouTube" icon={<YouTubeIcon/>}/>
-                <ButtonIconText text="Instagram" icon={<InstagramIcon/>}/>
+                <ButtonIconText text="Facebook" url={Link_Facebook} icon={<FacebookIcon/>}/>
+                <ButtonIconText text="YouTube" url={ Link_Youtube} icon={<YouTubeIcon/>}/>
+                {/* <ButtonIconText text="Instagram" icon={<InstagramIcon/>}/> */}
+                <ButtonIconText text="WhatsApp" url={Link_Whatsapp} icon={<WhatsappIcon/>}/>
             </ContainerSocial><br />
 
 
