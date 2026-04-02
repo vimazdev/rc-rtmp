@@ -63,6 +63,7 @@ const ContainerHeader = styled('div')`
     background-color: rgba(35, 51, 140, 0.6);
 
     img{
+      max-width: 200px;
       position:relative;
       margin-left:50%;
       margin-top:20px;
