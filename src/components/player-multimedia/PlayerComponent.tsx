@@ -8,7 +8,7 @@ interface PlayerProps {
 const PlayerComponent: React.FC<PlayerProps> = () => {
   const iframeAttributes = {
    // src: "https://player.castr.com/live_cc0f90705c7011f0af5a8df4b07bfd36",
-    src: "https://player.castr.com/live_cc0f90705c7011f0af5a8df4b07bfd36",
+    src: "https://player.castr.com/live_565cf300cbfa11f0bbf1f1b94fba7b6a",
     width: "100%",
     style: { aspectRatio: '16/9', minHeight: '340px' },
     frameBorder: "0",
